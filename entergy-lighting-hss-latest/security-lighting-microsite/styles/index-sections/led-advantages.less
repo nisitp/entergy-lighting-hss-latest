@@ -1,0 +1,89 @@
+﻿section.led-advantages, #led-advantages {
+    padding-top: 64px;
+    padding-bottom: 55px;
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    // should probably update to use bootstrap breakpoint stuff?
+    @media only screen and (min-width: 768px) {
+        padding-top: 82px;
+        padding-bottom: 100px;
+
+        h2 {
+            font-size: 45px;
+            // margin-bottom: 88px;
+        }
+
+        .row {
+            margin: 20px 0;
+            &.last {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        h2 {
+            font-size: 55px;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        h2 {
+            font-size: 65px;
+        }
+    }
+
+    #led-ecofriendly, #led-energyefficient, #led-instanton, #led-highvisibility, #led-quality {
+        h4 {
+            position: relative; padding-top: 120px;
+            &:before {
+                position: absolute;
+                margin: 0 auto;
+                top: 0;
+                width: 100px;
+                height: 100px;
+                content: " ";
+                background-image:url(../images/entergy-icon-sprite.png);
+                background-repeat: no-repeat;
+                display: block;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+    }   
+    #led-ecofriendly:before {
+        background-position: 0 0;
+    }
+    #led-instanton h4:before {
+        background-position:-120px 0;
+    }
+
+    #led-ecofriendly h4:before {
+        background-position:-240px 0;
+    }
+
+    #led-quality h4:before {
+        background-position:-350px 0;
+    }
+    #led-highvisibility h4:before {
+        width:140px;
+        background-position:-460px 0;
+    }
+
+}

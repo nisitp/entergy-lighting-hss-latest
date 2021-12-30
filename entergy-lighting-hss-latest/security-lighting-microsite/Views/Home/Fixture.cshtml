@@ -1,0 +1,110 @@
+﻿@model security_lighting_microsite.models.Fixture
+@{
+    var type = Model.Type.Replace(' ', '-').Replace('/', '-').ToLower();
+    int SpecsheetCount = Model.SpecSheets.Where(v => v.Availability.Contains(ViewBag.OpCoCode)).Count();
+}
+
+
+
+<header id="home" class="container" data-fixture-type="@type">
+    <div class="row">
+        <div class="hero-image">
+            <img src="~/images/fixtures/@type/banner-image.jpg"  class="img-responsive" alt="@Model.Type Example"/>
+        </div>
+    </div>
+</header>
+
+<section id="fixture-details" class="@type fixture-details container" data-nav-text="Fixture Details">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>@Model.Type Details</h2>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <img src="~/images/fixtures/@type/product-image.jpg" id="fixture-detail-image" alt="@Model.Type Example" class="img-responsive" />
+
+            <h3>Applications</h3>
+
+            <ul>
+                @foreach (var application in Model.Applications)
+                {
+                    <li>@application</li>
+                }
+            </ul> 
+        </div>
+
+        <div class="col-xs-12 col-sm-8">
+            <h3>Features</h3>
+
+            <ul>
+                @foreach (var feature in Model.ModifiedFeatures)
+                {
+                    <li>@feature</li>
+                }
+                <li class="product-availability-message">All product types may not be available in your area. Please <a href="#" class="contact-link" title="Contact Us">contact us</a> to find out more information.</li>
+            </ul>
+
+            @if(SpecsheetCount > 1){
+			    <h3>Specsheets</h3>
+			}
+			else if(SpecsheetCount == 1){
+                <h3>Specsheet</h3>
+			}
+            @if(SpecsheetCount > 0){
+                <ul>
+			
+                @foreach (var specsheet in Model.SpecSheets.Where(v => v.Availability.Contains(ViewBag.OpCoCode)))
+                {
+			    
+			        <li><a href="~/spec-sheets/@specsheet.Filename" class="" title="@specsheet.Filename">@specsheet.Filename</a></li>
+                }   
+           
+                </ul>
+            }
+           
+        </div>
+    </div>
+</section>
+
+<div class="full-bleed-background svg-background zigzag-up-down"></div>
+
+<section id="installations" class="fixture-installations container" data-nav-text="Installations">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>@Model.Type Installations</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <a href="~/images/fixtures/@type/installation-1.jpg" title="Additional @Model.Type" data-lightbox="fixture-page"><img src="~/images/fixtures/@type/installation-1.jpg" alt="Additional @Model.Type" class="img-responsive" /></a>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <a href="~/images/fixtures/@type/installation-2.jpg" title="Additional @Model.Type" data-lightbox="fixture-page"><img src="~/images/fixtures/@type/installation-2.jpg" alt="Additional @Model.Type" class="img-responsive" /></a>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <a href="~/images/fixtures/@type/installation-3.jpg" title="Additional @Model.Type" data-lightbox="fixture-page"><img src="~/images/fixtures/@type/installation-3.jpg" alt="Additional @Model.Type" class="img-responsive" /></a>
+        </div>
+        <div class="col-xs-12 text-center">Click to see more</div>
+        <div class="additional-fixture-images">
+            @for (var a = 4; a < 11; a++) {
+                if (a > 4 && !Model.HasLedBulbs) { break; }
+                if (File.Exists(Server.MapPath("~/images/fixtures/" + type + "/installation-" + a + ".jpg"))) {
+                    <a class="test" href="~/images/fixtures/@type/installation-@(a).jpg" data-lightbox="fixture-page"><img src="~/images/fixtures/@type/installation-@(a).jpg" class="img-responsive" /></a>
+                }
+            }
+        </div>
+    </div>
+</section>
+
+@Html.Partial("_contact")
+
+@Html.Partial("_fixtures", false)
+
+@section MetaTags{
+    <meta name="description" content="@Model.MetaDescription" />
+    <meta property="og:description" content="@Model.MetaDescription" />
+    <meta property="og:title" content="@Model.Type" />
+    <meta property="og:image" content="~/images/fixtures/@Model.id/product-image.jpg" />
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+}

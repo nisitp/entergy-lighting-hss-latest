@@ -1,0 +1,302 @@
+$headline-size: 18px;
+$sub-headline-size: 16px;
+$headline-top: 18px;
+$body-copy-size: 14px;
+
+@include breakpoint(mobile-only) {
+
+    #fixtureRecommender {
+        height: 520px;
+    
+        h2 {
+            font-size: $sub-headline-size;
+        }
+
+        .step--start,
+        .step--type_of_style,
+        .step--purpose,
+        .step--standard_decorative,
+        .step--commercial_residential,
+        .step--type_of_light,
+        .step--illumination_distance,
+        .step--type_of_coverage,
+        .step--area_feature,
+        .step--result {
+            .step__headline {
+                font-size: $headline-size;
+                margin-top: $headline-top;
+                margin-bottom: 0;
+            }
+        }
+
+        .step__button--continue {
+            width: 90%;
+            margin: 5% 0;
+        }
+
+        .step--start {
+            .step__pole--left {
+                display: none;
+            }
+
+            .step__pole--right {
+                right: 32%;
+            }
+        }
+
+        .u--pt75 {
+            padding-top: 30px;
+        }
+
+        .step--purpose,
+        .step--standard_decorative,
+        .step--commercial_residential {
+            .step__button--commercial {
+                margin-bottom: 20px;
+            }
+        }
+
+        .step--commercial_residential,
+        .step--purpose {
+            .step__button {
+                width: 130px;
+                margin: 0px 20px;
+                margin-bottom: 20px;
+
+                &:before {
+                    width: 85px;
+                    height: 85px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        .step--type_of_style .step__range {
+            margin-top: $headline-top;
+        }
+
+        .step__fixture {
+            font-size: $body-copy-size - 1;
+
+            .step__product-images {
+                position: relative;
+            }
+
+            .step__fixture-info {
+                padding-left: 0;
+                // clear: left;
+
+                .step__headline,
+                & > h2 {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+
+            .step__product-images {
+                margin: 10px;
+                width: 100%;
+
+                .step__product-image {
+                    max-width: 75px;
+                    margin-left: auto;
+                    margin-right: auto;                   
+                    display: block;
+                }
+
+                .step__product-image--sub {
+                    display: none;
+                }
+            }
+
+            .step__button {
+                margin-bottom: -13px;
+                width: 100%;
+            }
+        }
+
+        .step--area_feature {
+            .step__area {
+                width: 330px;
+                left: 50%;
+                margin-left: -165px;
+                margin-top: 60px;
+            }
+
+            .step__area-circle {
+                &--1 {
+                    background-size: 40%;
+                    left: 80px;
+                    top: 80px;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &--2 {
+                    left: 60px;
+                    top: 60px;
+                    width: 80px;
+                    height: 80px;
+                }
+
+                &--3 {
+                    left: 40px;
+                    top: 40px;
+                    width: 120px;
+                    height: 120px;
+                }
+
+                &--4 {
+                    left: 20px;
+                    top: 20px;
+                    width: 160px;
+                    height: 160px;
+                }
+
+                &--5 {
+                    left: 0;
+                    top: 0;
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+
+            .step__area-legend {
+                left: 102px;
+                top: -6px;
+                background-size: 100%;
+                width: 140px;
+
+                .step__area-legend-text--1 {
+                    left: 100px;
+                }
+
+                .step__area-legend-text--2 {
+                    left: 110px;
+                    top: 150px;
+                }
+            }
+        }
+
+        .step--type_of_light {
+            .step__lights {
+                margin-top: -50px;
+                margin-left: -172px;
+
+                .step__light {
+                    width: 100px;
+                    margin: 0px 7px;
+
+                    &:before {
+                        width: 100px;
+                        height: 74px;
+                        background-size: 100%;
+                    }
+
+                    &:after {
+                        top: 274px;
+                        width: 203px;
+                        background-size: 100%;
+                        left: -53px;
+                        background-position: 0px -132px;
+                    }
+                }
+            }
+        }
+
+        .step--illumination_distance,
+        .step--type_of_coverage {
+            .step__range {
+                margin-top: -40px;
+            }
+            .step__range .step__range-scale > div > span {
+                &:last-child {
+                    margin-right: 0;
+                    text-align: right;
+                    font-size: 10px;
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                    text-align: left;
+                    font-size: 10px;
+
+                }
+            }
+        }
+        
+        .step--result {
+          .multiple_steps {
+            .step__button {
+              width: 49%;
+              float: left;
+              margin-right: 1%;
+            }
+            .buttons {
+              min-height: 60px;
+            }
+          }
+          
+          .step__fixture {
+            clear: both;
+          }
+        
+          p { 
+            line-height: 1.25em !important;
+          }
+          ul, li {
+            margin: 0;
+            padding: 0 !important;
+          }
+          ul {
+            margin-left: 20px;
+          }
+        
+        }
+        
+    }
+}
+
+@include breakpoint(tablet-only) {
+    #fixtureRecommender {
+        height: 650px;
+        .step--start,
+        .step--type_of_style,
+        .step--purpose,
+        .step--standard_decorative,
+        .step--commercial_residential,
+        .step--type_of_light,
+        .step--illumination_distance,
+        .step--type_of_coverage,
+        .step--area_feature {
+            .step__headline {
+//                font-size: $headline-size * 1.2;
+//                margin-top: $headline-top * 1.2;
+            }
+        }
+        
+        .step--result {
+          .step__headline {
+            font-size: 20px;
+          }
+          h2 {
+            font-size: 22px !important;
+            margin-bottom: 16px !important;
+          }
+          p, li {
+            line-height: 1.25em !important;
+            padding: 0 !important;
+          }
+          
+          .step__button {
+            padding: 0 10px;
+          }
+        }
+
+        .u--pt75 {
+            padding-top: 50px;
+
+        }
+    }
+}

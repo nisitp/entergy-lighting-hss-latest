@@ -1,0 +1,204 @@
+@mixin v-transitionTransformD($transition-show, $transition-hide, $transform-from, $transform-to) {
+    &--transition-enter-active {
+        transition: #{$transition-show};
+        transform: #{$transform-from};
+    }
+    &--transition-leave-active {
+        transition: #{$transition-hide};
+        transform: #{$transform-to};
+    }
+    &--transition-enter-to {
+        transform: #{$transform-to};
+    }
+    &--transition-leave-to {
+        transform: #{$transform-from};
+    }
+}
+
+@mixin v-transitionTransform($transition, $transform-from, $transform-to) {
+    @include v-transitionTransformD($transition, $transition, $transform-from, $transform-to)
+}
+
+@mixin v-transitionOpacityD($transition-show, $transition-hide, $opacity-from, $opacity-to) {
+    &--transition-enter-active {
+        transition: #{$transition-show};
+        opacity: #{$opacity-from};
+    }
+    &--transition-leave-active {
+        transition: #{$transition-hide};
+        opacity: #{$opacity-to};
+    }
+    &--transition-enter-to {
+        opacity: #{$opacity-to};
+    }
+    &--transition-leave-to {
+        opacity: #{$opacity-from};
+    }
+}
+
+@mixin v-transitionOpacity($transition, $opacity-from, $opacity-to) {
+    @include v-transitionOpacityD($transition, $transition, $opacity-from, $opacity-to);
+}
+
+@mixin breakpoint($class) {
+    @if $class==mobile-mini {
+        @media (max-width: 330px) {
+            @content;
+        }
+    }
+    @if $class==mobile-only {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $class==tablet {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $class==tablet-small {
+        @media (min-width: 575px) {
+            @content;
+        }
+    }
+    @else if $class==tablet-only {
+        @media (min-width: 768px) and (max-width: 979px) {
+            @content;
+        }
+    }
+    @else if $class==tablet-down {
+        @media (max-width: 979px) {
+            @content;
+        }
+    }
+    @else if $class==desktop {
+        @media (min-width: 980px) {
+            @content;
+        }
+    }
+    @else if $class==desktop-down {
+        @media (max-width: 1219px) {
+            @content;
+        }
+    }
+    @else if $class==desktop-only {
+        @media (min-width: 980px) and (max-width: 1219px) {
+            @content;
+        }
+    }
+    @else if $class==wide {
+        @media (min-width: 1220px) {
+            @content;
+        }
+    }
+    @else if $class==mega {
+        @media (min-width: 1500px) {
+            @content;
+        }
+    }
+    @else if $class==all {
+        @media (min-width: all) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+
+.u {
+    &--center {
+        text-align: center;
+    }
+    &--pt75 {
+        padding-top: 75px;
+    }
+}
+
+.button {
+    display: block;
+    height: 40px;
+    box-sizing: border-box;
+    background: #EB0A26;
+    border: 2px solid #EB0A26;
+    padding: 0px 40px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0.03px;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+        background: #000333;
+    }
+}
+
+.range-input {
+    -webkit-appearance: none;
+    border-radius: 5px;
+    outline: none;
+    display: inline;
+    margin: 0;
+    
+    .isIE & {
+        margin-bottom: -30px;
+    }
+
+    .noIE & {
+        height: 4px;
+        background: #DDD9D4;
+    }
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #EB0A26;
+        border: 1px solid #FFFFFF;
+        cursor: pointer;
+    }
+    &::-moz-range-thumb {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #EB0A26;
+        border: 1px solid #FFFFFF;
+        cursor: pointer;
+    }
+    &::-ms-track {
+        width: 100%;
+        height: 5px;
+        background: transparent;
+        border-color: transparent;
+        border-width: 14px 0;
+        color: transparent;
+    }
+    &::-ms-fill-lower {
+        background: #DDD9D4;
+        border-radius: 10px;
+    }
+    &::-ms-fill-upper {
+        background: #DDD9D4;
+        border-radius: 10px;
+    }
+    &::-ms-thumb {
+        height: 30px;
+        width: 30px;
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        background: #EB0A26;
+    }
+    &:focus::-ms-fill-lower {
+        background: #DDD9D4;
+    }
+    &:focus::-ms-fill-upper {
+        background: #DDD9D4;
+    }
+}

@@ -1,0 +1,73 @@
+﻿@{
+    string actionName = ViewContext.RouteData.Values["action"].ToString().ToLower();
+    string opCoName = ViewContext.RouteData.Values.ContainsKey("OpCo") ? ViewContext.RouteData.Values["OpCo"].ToString().ToLower() : "null";
+}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="http://www.entergy.com/" target="_blank" class="navbar-brand" title="Entergy | We Power Life"><img src="~/images/entergy-logo.png" alt="Entergy" /></a>
+            <div class="navbar-right">
+                <button type="button" class="btn btn-default" data-toggle="dropdown">
+                    <span id="current-section-name">Security Lighting by Entergy</span>
+
+                    <div class="hamburger">
+                        <span>toggle menu</span>
+                    </div>
+                </button>
+
+                <ul id="nav-menu" class="dropdown-menu">
+                    @if (actionName == "index")
+                    {
+                        <li><a class="internal" href="#home" title="Entergy Security Lighting Home">Entergy Security Lighting Home</a></li>
+                        <li><a class="internal" href="#security-lighting-benefits" title="Entergy Benefits">Benefits</a></li>
+                        if (!opCoName.Contains("null"))
+                        {
+                        <li><a class="internal" href="#why-is-security-lighting-important" title="Why is Entergy Security Lighting Important?">Why is Security Lighting important?</a></li>
+                        <li><a class="internal fixtures-recommender-pagelink" href="#fixture-recommender" id="fixture-recommender-pagelink" title="Entergy Fixture Recommender">Fixture Recommender</a></li>
+                        }
+                        <li><a class="internal available-fixtures-pagelink" href="#region-selection" id="available-fixtures-pagelink" title="Available Entergy Fixtures">Available Fixtures</a></li>
+                        <li><a class="internal" href="#installations" title="What are Entergy customers saying?">What are Entergy customers saying?</a></li>
+                        <li><a class="internal" href="#faqs" title="Entergy Security Lighting FAQs">FAQs about Entergy Security Lighting</a></li>
+
+                        }
+
+                    @if (actionName == "fixture")
+                    {
+                        if (!opCoName.Contains("null"))
+                        {
+                            <li><a href="~/@opCoName" title="Entergy Security Lighting">Entergy Security Lighting Home</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="~/" title="Entergy Security Lighting">Entergy Security Lighting Home</a></li>
+                        }
+                        <li><a class="internal" href="#fixture-details" title="Fixture Details">Fixture Details</a></li>
+                        <li><a class="internal" href="#installations" title="Our Installations">Our Installations</a></li>
+                        <li><a class="internal" href="#contact" title="Contact Us">Contact Us</a></li>
+                        <li><a class="internal" href="#available-fixtures" title="Available Fixtures">Available Fixtures</a></li>
+                    }
+                    @if (actionName == "index")
+                    {
+                        <li><a href="http://entergy.com/lightsout" target="_blank" title="Report an Outage">Is your light out? Report an outage</a></li>
+                    }
+
+                    <li class="menu-separator">
+                        <div></div>
+                    </li>
+
+                    <li class="nav-contact">
+                        <button id="nav-contact-us" class="nav-contact-us btn btn-entergy">Contact Us</button>
+                    </li>
+
+                    <li class="phone-number">
+                        <span><a href="tel:1-866-603-0192">1-866-603-0192</a></span>
+                        <span id="visit-entergy">Visit <a href="http://www.entergy.com/" target="_blank" title="Entergy | We Power Life">Entergy.com</a></span>
+                    </li>
+                    <a class="report-outage-link" href="http://entergy.com/lightsout/" target="_blank" title="Entergy | Security Lighting Repair">Report an Outage</a>
+                </ul>
+            </div>
+            <button id="nav-contact-us-otp" class="nav-contact-us btn btn-entergy">Contact Us</button>
+        </div>
+    </div>
+</div>
+

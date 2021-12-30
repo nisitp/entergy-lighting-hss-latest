@@ -1,0 +1,65 @@
+﻿@{ #line 1 "C:\Development\entergy-lighting-hss\security-lighting-microsite\Views\Shared\_layout.cshtml"
+                /**/
+
+                string opCo = (string)ViewContext.RouteData.Values["OpCo"];
+
+                string controllerName = ViewContext.RouteData.Values["controller"].ToString().ToLower();
+                string actionName = ViewContext.RouteData.Values["action"].ToString().ToLower();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @RenderSection("MetaTags", required: false)
+    <title>@ViewBag.PageTitle</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/styles/flexslider.css" rel="stylesheet" type="text/css">
+    <link href="~/styles/lightbox.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700" rel="stylesheet" type="text/css">
+</head>
+<body id="@controllerName-@actionName" class="@(opCo != null ? opCo : "no-region")">
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NDJDLC"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NDJDLC');</script>
+    <!-- End Google Tag Manager -->
+
+    <div id="page">
+
+        @Html.Partial("_navbar")
+
+        @RenderBody()
+
+        @Html.Partial("_footer")
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        if (typeof jQuery === 'undefined') {
+            document.write(unescape('%3Cscript%20src%3D%22/scripts/lib/jquery-2.1.4.min.js%22%3E%3C/script%3E'));
+        }
+    </script>
+
+    <script src="~/scripts/jquery.flexslider-min.js"></script>
+    <script src="~/scripts/lightbox.min.js"></script>
+    @Scripts.Render("~/bundles/lib")
+    @Scripts.Render("~/bundles/site")
+    @RenderSection("scripts", required: false)
+    <link href="~/styles/temp.css" rel="stylesheet" type="text/css">
+
+</body>
+</html>

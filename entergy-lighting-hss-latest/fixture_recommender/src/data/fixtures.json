@@ -1,0 +1,153 @@
+[
+    {
+        "name": "Shoebox",
+        "imgs": [
+            "images/fixtures/shoebox/product-image.jpg",
+            "images/fixtures/shoebox/installation-1.jpg",
+            "images/fixtures/shoebox/installation-2.jpg"
+        ],
+        "desc": "Minimalist and modern, Shoebox fixtures are ideal for professional locations like business parking lots and retail zones, as well as for roadway lighting. These fixtures are also attractive but durable, accommodating both high-pressure sodium and metal halide bulbs.",
+        "link": "fixture/shoebox",
+        "commercial_residential": ["commercial"],
+        "purpose": ["parking", "pedestrian"],
+        "standard_decorative": ["decorative"],
+        "area_feature": ["area"],
+        "type_of_style": ["modern"],
+        "type_of_light": ["amber_glow", "bright_white", "led"],
+        "type_of_coverage": [],
+        "illumination_distance": ["180_320_ft", "wide"],
+        "features": [
+          "Available in Amber Glow Light (High Pressure Sodium)",
+          "Available in Bright White Light (Metal Halide)",
+          "Available in Light Emitting Diode (LED)",
+          "Installed on Entergy-owned decorative poles",
+          "Office Park, retail parking lots and roadway lighting."
+        ]
+    },
+    {
+        "name": "Open Bottom",
+        "imgs": [
+            "images/fixtures/open-bottom/product-image.jpg",
+            "images/fixtures/open-bottom/installation-1.jpg",
+            "images/fixtures/open-bottom/installation-2.jpg"
+        ],
+        "desc": "Open Bottom fixtures provide a pool of circular light directly below the head of the fixture. As such, they are perfect for situations where clients want to illuminate a relatively small zone very well, without excess light “escaping.” Open Bottom lighting is therefore a great choice for residential backyards and driveways.",
+        "link": "fixture/open-bottom",
+        "commercial_residential": ["commercial", "residential"],
+        "purpose": ["security", "work", "pedestrian"],
+        "standard_decorative": ["standard"],
+        "area_feature": ["area"],
+        "type_of_style": ["transitional", "traditional"],
+        "type_of_light": ["amber_glow", "bright_white", "led"],
+        "type_of_coverage": ["close_space"],
+        "illumination_distance": ["up_to_75", "170_300_ft"],
+        
+        "features": [
+          "Available in Bright White Light (Metal Halide)",
+          "Available in Amber Glow Light (High Pressure Sodium)",
+          "Available in Light Emitting Diode (LED",
+          "Circular lighting pattern",
+          "Area lighting. Primarily residential backyards and driveways",
+          "Installed on Entergy-owned poles"                  ]
+    },
+    {
+        "name": "Cobra",
+        "imgs": [
+            "images/fixtures/cobra/product-image.jpg",
+            "images/fixtures/cobra/installation-1.jpg",
+            "images/fixtures/cobra/installation-2.jpg"
+        ],
+        "desc": "Durable and well-protected from the elements, Cobra lighting is a great choice for high-traffic public areas like parking lot entryways and access roads. Cobra fixtures provide a conical lighting arc and accommodate high-pressure sodium bulbs.",
+        "link": "./fixture/cobra",
+        "commercial_residential": ["commercial", "residential"],
+        "purpose": ["security", "work", "parking"],
+        "standard_decorative": [],
+        "area_feature": ["area"],
+        "type_of_style": ["modern"],
+        "type_of_light": ["amber_glow","bright_white","led"],
+        "type_of_coverage": [],
+        "illumination_distance": ["76_to_100", "60_150_ft"],
+        "features": [
+          "Available in various wattage sizes",
+          "Available in Amber Glow Light (High Pressure Sodium)",
+          "Available in Bright White Light (Metal Halide)",
+          "Available in Light Emitting Diode (LED)",
+          "Mounted on Entergy-owned poles"        ]
+    },
+    {
+        "name": "Directional / Flood",
+        "imgs": [
+            "images/fixtures/directional-flood/product-image.jpg",
+            "images/fixtures/directional-flood/installation-1.jpg",
+            "images/fixtures/directional-flood/installation-2.jpg"
+        ],
+        "desc": "Ideal for situations where lighting needs can vary, Directional/Flood fixtures can be positioned to provide the best illumination required on any given day. These flexible fixtures also accommodate both high-pressure sodium and metal halide bulbs.",
+        "link": "fixture/directional-flood",
+        "commercial_residential": ["commercial", "residential"],
+        "purpose": ["security", "work", "parking"],
+        "standard_decorative": ["standard"],
+        "area_feature": ["area"],
+        "type_of_style": [],
+        "type_of_light": ["amber_glow", "bright_white", "led"],
+        "type_of_coverage": ["open_area"],
+        "illumination_distance": ["101_to_130"],
+        "features": [
+          "Available in Various Wattage Sizes",
+          "Available in Amber Glow Light (High Pressure Sodium)",
+          "Available in Bright White Light (Metal Halide)",
+          "Available in Light Emitting Diode (LED)",
+          "Area Lighting and Feature Highlighting",
+          "Installed on Entergy-Owned Poles"
+        ]
+    },
+    {
+        "name": "Traditionaire",
+        "imgs": [
+            "images/fixtures/traditionaire/product-image.jpg",
+            "images/fixtures/traditionaire/installation-1.jpg",
+            "images/fixtures/traditionaire/installation-2.jpg"
+        ],
+        "desc": "These elegant fixtures are the go-to option for lighting that will be placed in high-visibility locations like parks, gardens and well-traveled residential streets. The traditional design mirrors an antique gas-lamp and can be fitted with high-pressure sodium bulbs.",
+        "link": "fixture/traditionaire",
+        "commercial_residential": ["commercial"],
+        "purpose": ["pedestrian"],
+        "standard_decorative": ["decorative"],
+        "area_feature": ["area"],
+        "type_of_style": ["traditional"],
+        "type_of_light": ["amber_glow", "led", "bright_white"],
+        "type_of_coverage": [],
+        "illumination_distance": ["80_150_ft", "short"],
+        "features": [
+          "Available in Various Wattage Sizes",
+          "Available in Amber Glow Light (High Pressure Sodium)",
+          "Available in Light Emitting Diode (LED)",
+          "Subdivision, Apartment Multi-Family, Office Park, Retail, and Roadway Lighting",
+          "Installed on Entergy-owned decorative poles"
+        ]
+    },
+    {
+        "name": "Acorn",
+        "imgs": [
+            "images/fixtures/acorn/product-image.jpg",
+            "images/fixtures/acorn/installation-1.jpg",
+            "images/fixtures/acorn/installation-2.jpg"
+        ],
+        "desc": "A good compromise between form and elegance, Acorn fixtures are extremely flexible and are perfect for housing subdivisions, roadways and office external areas. They can be fitted with both high-pressure sodium and metal halide bulbs.",
+        "link": "fixture/acorn",
+        "commercial_residential": ["commercial"],
+        "purpose": ["pedestrian", "parking"],
+        "standard_decorative": ["decorative"],
+        "area_feature": ["feature"],
+        "type_of_style": ["traditional"],
+        "type_of_light": ["amber_glow", "led", "bright_white"],
+        "type_of_coverage": [],
+        "illumination_distance": ["short"],
+        "features": [
+          "Available in Amber Glow Light (High Pressure Sodium)",
+          "Available in Bright White Light (Metal Halide)",
+          "Available in Light Emitting Diode",
+          "Subdivision, Apartment Multi family, Office Park, Retail, and Roadway Lighting",
+          "Installed on Entergy-owned decorative poles"
+        ]
+    }
+]

@@ -1,0 +1,78 @@
+﻿@model bool
+
+@{
+    var fixtures = security_lighting_microsite.models.Fixture.GetFixtures(ViewBag.OpCoCode);
+    var ledFixturesAvailable = fixtures.HasLEDs;
+}
+
+@if (ledFixturesAvailable) {
+
+<section id="fixture-recommender" class="available-fixtures container-fluid" data-nav-text="Fixture Recommender">
+    <div class="row">
+		<div class="col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Fixture Recommender</h2>
+                    </div>
+				
+                
+                    <div class="col-xs-12 text-center">                            
+                        <div id="fixtureRecommender"></div>
+                        <script src="~/scripts/fixtureRecommender.js"></script>
+                    </div>
+				</div>
+            </div>
+		</div>
+	</div>
+</section>
+}
+<section id="available-fixtures" class="commercial-fixtures available-fixtures container-fluid" data-nav-text="Available Fixtures">
+<div class="row">
+        <div class="col-xs-12">
+			<div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Available Fixtures</h2>
+                    </div>
+                </div>				
+                <div class="row" id="available-fixtures-tab">
+                    <div class="col-xs-12 text-center">
+                        <div class="fixture-filter residence-type">
+                            <a href="#" data-filter="commercial-fixtures" class="not-toggle commercial-fixtures" title="Commercial Fixtures">Commercial <span class="extended">Fixtures</span></a>
+                            <span class="toggle-switch"><a href="#"></a></span>
+                            <a href="#" data-filter="residential-fixtures" class="not-toggle residential-fixtures" title="Residential Fixtures">Residential <span class="extended">Fixtures</span></a>
+                        </div>
+                    </div>
+                    <div id="fixture-summary-container" class="col-xs-12">
+                        @if (Model && ViewBag.OpCo != null)
+                        {
+                            Html.RenderAction("FixtureSummary", new { OpCo = ViewBag.OpCo, FixtureType = "directional-flood" });
+                        }
+                    </div>
+
+                    <div class="fixture-selector">
+                        @foreach (var type in fixtures.Fixtures)
+                        {
+                            //var typeName = type.Type.Replace(' ', '-').Replace('/','-').ToLower();
+						    var fixtureID = type.id;
+                            var displayName = type.Type;
+
+                            <div class="col-xs-6 col-sm-2 fixture fixture-type-@fixtureID @(Model && fixtures.Fixtures.IndexOf(type) == 0 ? "selected-fixture" : "")">
+                                <a href="~/@(ViewBag.OpCo ?? "no-region")/fixture/@fixtureID">
+                                    @Helpers.InjectSVG(string.Format("fixtures/{0}.svg", fixtureID))
+                                    <span>@displayName</span>
+                                </a>
+                                @if (type.HasLedBulbs)
+                                {
+                                    <span class="led-badge"></span>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+</section>
+

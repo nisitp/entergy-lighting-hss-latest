@@ -1,0 +1,750 @@
+﻿[
+
+  {
+    "id": "shoebox",
+    "metadescription": "Entergy Shoebox fixtures are attractive and durable, and ideal for professional locations like business parking lots and retail zones, as well as for roadway lighting.",
+    "type": "Shoebox",
+    "features": [
+      "Available in Amber Glow Light (High Pressure Sodium)",
+      "Available in Bright White Light (Metal Halide)",
+      "Installed on Entergy-owned decorative poles",
+      "Office Park, retail parking lots and roadway lighting."
+    ],
+    "specsheets": [
+      {
+        "filename": "Entergy-ShoeboxFixture_AllSizes_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "EMI", "EAI", "ELL", "ETI", "ENO" ]
+      },
+      {
+        "filename": "Entergy-ShoeboxFixture_Adapter_250W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI" ]
+      },
+      {
+        "filename": "Entergy-ShoeboxFixture_Adapter_400W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI", "ETI" ]
+      },
+      {
+        "filename": "Entergy-ShoeboxFixture_Adapter_1000W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI", "ETI" ]
+      },
+      {
+        "filename": "Entergy-ShoeboxFixture_PipeBracketMounting_250W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI" ]
+      },
+      {
+        "filename": "Entergy-ShoeboxFixture_Adapter_320_400W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "EMI", "ENO" ]
+      },
+      {
+        "filename": "Entergy-ShoeboxFixture_Adapter_1000W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "ENO", "EMI" ]
+      }
+    ],
+    "summary": "Minimalist and modern, Shoebox fixtures are ideal for professional locations like business parking lots and retail zones, as well as for roadway lighting. These fixtures are also attractive but durable, accommodating both high-pressure sodium and metal halide bulbs.",
+    "applications": [
+      "Parking Lots",
+      "Commercial & Municipal Applications",
+      "Car Dealerships",
+      "Shopping Centers",
+      "Schools & Campuses",
+      "City Streets",
+      "Bridges"
+    ],
+    "variations": [
+      {
+        "fixture": "150 Watt MH",
+        "bulb": "MH",
+        "illumination": {
+          "diameter": 75
+        },
+        "availability": [ "EMI" ],
+        "ledavailability": [ "EMI" ],
+        "zoning": [ "com" ]
+      },
+      {
+        "fixture": "320 Watt MH",
+        "bulb": "MH",
+        "illumination": {
+          "diameter": 180
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com", "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "1,000 Watt MH",
+        "bulb": "MH",
+        "illumination": {
+          "diameter": 320
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com", "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "400 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 180
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com", "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "1,000 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 320
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com", "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "22,400 LED (400 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 320
+        },
+        "availability": [ "EAI", "ELL", "ENO", "EMI", "ETI" ],
+        "zoning": [ "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "12,200 LED (250 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 180
+        },
+        "availability": [ "EAI" ],
+        "zoning": [ "com" ]
+      },
+      {
+        "fixture": "24,800 LED (1,000 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 320
+        },
+        "availability": [ "EAI", "ELL", "ENO", "EMI", "ETI" ],
+        "zoning": [ "com", "com", "com", "com", "com" ]
+      }
+    ]
+  },
+  {
+    "id": "open-bottom",
+    "metadescription": "Entergy Open Bottom fixtures are a great choice for residential backyards and driveways.",
+    "type": "Open Bottom",
+    "specsheet": "open-bottom.pdf",
+    "features": [
+      "Available in Bright White Light (Metal Halide)",
+      "Available in Amber Glow Light (High Pressure Sodium)",
+      "Circular lighting pattern",
+      "Area lighting. Primarily residential backyards and driveways",
+      "Installed on Entergy-owned poles"
+    ],
+    "specsheets": [
+      {
+        "filename": "Entergy-OpenBottomFixture_AllSizes_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "EAI", "ELL", "EMI" ]
+      },
+      {
+        "filename": "Entergy-OpenBottomFixture_100W_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "ETI" ]
+      },
+      {
+        "filename": "Entergy-OpenBottomFixture_150W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI", "ETI" ]
+      },
+      {
+        "filename": "Entergy-OpenBottomFixture_100W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "EMI", "ENO" ]
+      }
+    ],
+    "summary": "Open Bottom fixtures provide a pool of circular light directly below the head of the fixture. As such, they are perfect for situations where clients want to illuminate a relatively small zone very well, without excess light “escaping.” Open Bottom lighting is therefore a great choice for residential backyards and driveways.",
+    "applications": [
+      "Rural Residence",
+      "General Security Lighting",
+      "Loading & Receiving Areas",
+      "Parking Lots",
+      "Storage Areas",
+      "Residential Streets",
+      "High Speed Roadways"
+    ],
+    "variations": [
+      {
+        "fixture": "100 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 50
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "150 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 170
+        },
+        "availability": [ "EAI" ],
+        "zoning": [ "com-res" ]
+      },
+      {
+        "fixture": "250 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 250
+        },
+        "availability": [ "EGSL", "EAI" ],
+        "zoning": [ "com-res", "com-res" ]
+      },
+      {
+        "fixture": "320 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 300
+        },
+        "availability": [ "ETI", "EAI" ],
+        "zoning": [ "com-res", "com-res" ]
+      },
+      {
+        "fixture": "400 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 300
+        },
+        "availability": [ "EAI" ],
+        "zoning": [ "com-res" ]
+      },
+      {
+        "fixture": "4,800 LED (100 HID Equivalent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 300
+        },
+        "availability": [ "EAI", "ELL", "ENO", "EMI" ],
+        "zoning": [ "com-res", "com-res" ]
+      },
+      {
+        "fixture": "6,900 LED (150 HID Equivalent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 300
+        },
+        "availability": [ "EAI", "ETI" ],
+        "zoning": [ "com-res" ]
+      }
+    ]
+  },
+  {
+    "id": "directional-flood",
+    "metadescription": "Directional/Flood fixtures from Entergy can be positioned to provide the best illumination required on any given day.",
+    "type": "Directional/Flood",
+    "specsheet": "directional.pdf",
+    "features": [
+      "Available in Various Wattage Sizes",
+      "Available in Amber Glow Light (High Pressure Sodium)",
+      "Available in Bright White Light (Metal Halide)",
+      "Area Lighting and Feature Highlighting",
+      "Installed on Entergy-Owned Poles"
+    ],
+    "summary": "Ideal for situations where lighting needs can vary, Directional/Flood fixtures can be positioned to provide the best illumination required on any given day. These flexible fixtures also accommodate both high-pressure sodium and metal halide bulbs.",
+    "applications": [
+      "Parking Lots",
+      "Building Facades",
+      "Schools & Campuses",
+      "Military Bases",
+      "Industrial Parks",
+      "Substations",
+      "Parks & Recreation Areas",
+      "Car Dealerships"
+    ],
+    "specsheets": [
+      {
+        "filename": "Entergy-DirectionalFloodFixture_100W-400W_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "EAI", "ELL", "ENO", "ETI", "EMI" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_320W_400W_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "ELL", "ENO", "ETI" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_1000W_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "EAI", "ENO", "ETI", "EMI" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_100W_LED.pdf",
+        "description": "",
+        "availability": [ "ETI" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_250W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_320_400W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI", "ETI" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_1000W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI", "ETI" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_150W_LED.pdf",
+        "description": "",
+        "availability": [ "EMI", "ENO" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_250W_LED.pdf",
+        "description": "",
+        "availability": [ "ENO" ]
+      },
+      {
+        "filename": "Entergy-DirectionalFloodFixture_1000W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "EMI", "ENO" ]
+      }
+    ],
+    "variations": [
+      {
+        "fixture": "320 Watt MH",
+        "bulb": "MH",
+        "illumination": {
+          "width": 60,
+          "depth": 95
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "1,000 Watt MH",
+        "bulb": "MH",
+        "illumination": {
+          "width": 80,
+          "depth": 130
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "100 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "width": 30,
+          "depth": 50
+        },
+        "availability": [ "EGSL", "ELL", "ETI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "150 Watt HPS",
+        "bulb": "HPS",
+        "illumination": null,
+        "availability": [ "EMI" ],
+        "zoning": [ "com-res" ]
+      },
+      {
+        "fixture": "250 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "width": 65,
+          "depth": 80
+        },
+        "availability": [ "EMI", "ELL", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "400 Watt HPS",
+        "bulb": "HPS",
+        "illumination": null,
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "1,000 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "width": 75,
+          "depth": 110
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "7,600 LED (150 HID Equivalent)",
+        "bulb": "LED",
+        "illumination": {
+          "width": 75,
+          "depth": 110
+        },
+        "availability": [ "EMI", "EAI" ],
+        "zoning": [ "com-res", "com-res" ]
+      },
+      {
+        "fixture": "11,500 LED (250 HID Equivalent)",
+        "bulb": "LED",
+        "illumination": {
+          "width": 120,
+          "depth": 120
+        },
+        "availability": [ "EMI", "EAI", "ENO", "ELL" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "22,400 LED (400 HID Equivalent)",
+        "bulb": "LED",
+        "illumination": {
+          "width": 150,
+          "depth": 140
+        },
+        "availability": [ "EMI", "EAI", "ENO", "ELL", "ETI" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "32,300 LED (1,000 HID Equivalent)",
+        "bulb": "LED",
+        "illumination": {
+          "width": 150,
+          "depth": 190
+        },
+        "availability": [ "EMI", "EAI", "ENO", "ELL", "ETI" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "5,500 LED (100 HID Equivalent)",
+        "bulb": "LED",
+        "illumination": {
+          "width": 75,
+          "depth": 110
+        },
+        "availability": [ "EAI", "ENO", "ELL", "ETI" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res" ]
+      }
+    ]
+  },
+  {
+    "id": "cobra",
+    "metadescription": "Entergy Cobra lighting is a great choice for high-traffic public areas like parking lot entryways and access roads",
+    "type": "Cobra",
+    "specsheet": "cobra.pdf",
+    "features": [
+      "Available in various wattage sizes",
+      "Available in Amber Glow Light (High Pressure Sodium)",
+      "Available in Bright White Light (Metal Halide)",
+      "Mounted on Entergy-owned poles"
+    ],
+    "summary": "Durable and well-protected from the elements, Cobra lighting is a great choice for high-traffic public areas like parking lot entryways and access roads. Cobra fixtures provide a conical lighting arc and accommodate high-pressure sodium bulbs.",
+    "applications": [
+      "Residential Streets",
+      "Storage Areas",
+      "Parking Lots",
+      "Loading & Receiving Areas",
+      "General Security Lighting",
+      "Off Ramps",
+      "High Speed Roadways"
+    ],
+    "specsheets": [
+      {
+        "filename": "Entergy-CobraFixture_150W_HPS.pdf",
+        "description": "",
+        "availability": [ "EMI" ]
+      },
+      {
+        "filename": "Entergy-CobraFixture_250W_HPS.pdf",
+        "description": "",
+        "availability": [ "EAI", "EMI", "ENO" ]
+      },
+      {
+        "filename": "Entergy-CobraFixture_320W_400W_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "EAI", "EMI", "ENO" ]
+      },
+      {
+        "filename": "Entergy-CobraFixture_150W_LED.pdf",
+        "description": "",
+        "availability": [ "EMI" ]
+      },
+      {
+        "filename": "Entergy-CobraFixture_250W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "EMI", "ENO" ]
+      },
+      {
+        "filename": "Entergy-CobraFixture_400W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "EMI", "ENO" ]
+      },
+      {
+        "filename": "Entergy-CobraFixture_250W_HPS.pdf",
+        "description": "",
+        "availability": [ "ELL"]
+      },
+      {
+        "filename": "Entergy-CobraFixture_320W_400W_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "ELL"]
+      }
+    ],
+    "variations": [
+      {
+        "fixture": "150 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "width": 60,
+          "depth": 40
+        },
+        "availability": [ "EMI", "EAI" ],
+        "zoning": [ "com-res", "com-res" ]
+      },
+      {
+        "fixture": "250 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "width": 100,
+          "depth": 65
+        },
+        "availability": [ "EMI", "ELL", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "320 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "width": 150,
+          "depth": 80
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "400 Watt HPS (Non-Residential only)",
+        "bulb": "HPS",
+        "illumination": {
+          "width": 150,
+          "depth": 80
+        },
+        "availability": [ "EMI", "ELL", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "12,300 LED (250 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "width": 100,
+          "depth": 65
+        },
+        "availability": [ "ELL", "ENO", "EMI" ],
+        "zoning": [ "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "21,000 LED (400 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "width": 150,
+          "depth": 80
+        },
+        "availability": [ "ELL", "ENO", "EMI" ],
+        "zoning": [ "com-res", "com-res", "com-res" ]
+      },
+      {
+        "fixture": "9,100 LED (150 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "width": 150,
+          "depth": 80
+        },
+        "availability": [ "EMI" ],
+        "zoning": [ "com-res" ]
+      }
+    ]
+  },
+  {
+    "id": "traditionaire",
+    "metadescription": "Traditionaire fixtures from Entergy are the go-to option for lighting high-visibility locations like parks, gardens and well-traveled residential streets.",
+    "type": "Traditionaire",
+    "specsheet": "traditionaire.pdf",
+    "features": [
+      "Available in Various Wattage Sizes",
+      "Available in Amber Glow Light (High Pressure Sodium)",
+      "Subdivision, Apartment Multi-Family, Office Park, Retail, and Roadway Lighting",
+      "Installed on Entergy-owned decorative poles"
+    ],
+    "summary": "These elegant fixtures are the go-to option for lighting that will be placed in high-visibility locations like parks, gardens and well-traveled residential streets. The Traditional design mirrors an antique gas-lamp and can be fitted with high-pressure sodium bulbs.",
+    "applications": [
+      "City Streets",
+      "Parking Lots",
+      "Shopping Centers",
+      "Residential Streets",
+      "Schools & Campuses",
+      "Parks & Recreation Areas"
+    ],
+    "specsheets": [
+      {
+        "filename": "Entergy-TraditionaireFixture_150W_HPS.pdf",
+        "description": "",
+        "availability": [ "EAI", "EMI", "ENO", "ETI" ]
+      },
+      {
+        "filename": "Entergy-TraditionaireFixture_FullCutOff_100W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI" ]
+      },
+      {
+        "filename": "Entergy-TraditionaireFixture_NonCutOff_100W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI" ]
+      },
+      {
+        "filename": "Entergy-TraditionaireFixture_NonCutOff_100W_LED.pdf",
+        "description": "",
+        "availability": [ "EMI" ]
+      },
+      {
+        "filename": "Entergy-TraditionaireFixture_NonCutOff_150W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "EMI", "ENO", "ETI" ]
+      },
+      {
+        "filename": "Entergy-TraditionaireFixture_NonCutOff_Glass_100W_LED.pdf",
+        "description": "",
+        "availability": [ "EMI" ]
+      },
+      {
+        "filename": "Entergy-TraditionaireFixture_NonCutOff_Glass_150W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "EMI", "ENO", "ETI" ]
+      }
+    ],
+    "variations": [
+      {
+        "fixture": "150 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 80
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "250 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 150
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "6,200 LED (150 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 135
+        },
+        "availability": [ "EAI", "ENO", "EMI", "ELL", "ETI" ],
+        "zoning": [ "com-res", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "4,500 LED (100 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 80
+        },
+        "availability": [ "EAI" ],
+        "zoning": [ "com-res" ]
+      }
+    ]
+  },
+  {
+    "id": "acorn",
+    "metadescription": "Entergy Acorn fixtures are extremely flexible and are perfect for housing subdivisions, roadways and office external areas",
+    "type": "Acorn",
+    "specsheet": "acorn.pdf",
+    "features": [
+      "Available in Amber Glow Light (High Pressure Sodium)",
+      "Available in Bright White Light (Metal Halide)",
+      "Subdivision, Apartment Multi family, Office Park, Retail, and Roadway Lighting",
+      "Installed on Entergy-owned decorative poles"
+    ],
+    "summary": "A good compromise between form and elegance, Acorn fixtures are extremely flexible and are perfect for housing subdivisions, roadways and office external areas. They can be fitted with both high-pressure sodium and metal halide bulbs.",
+    "applications": [
+      "City Streets",
+      "Parking Lots",
+      "Residential Streets",
+      "Schools & Campuses",
+      "Parks & Recreation Areas"
+    ],
+    "specsheets": [
+      {
+        "filename": "Entergy-AcornFixture_150W_HPS-MH.pdf",
+        "description": "",
+        "availability": [ "EAI", "ELL", "EMI", "ENO", "ETI" ]
+      },
+      {
+        "filename": "Entergy-AcornFixture_150W-LED.pdf",
+        "description": "",
+        "availability": [ "EAI", "ETI" ]
+      },
+      {
+        "filename": "Entergy-AcornFixture_150W_LED.pdf",
+        "description": "",
+        "availability": [ "ELL", "EMI", "ENO" ]
+      },
+      {
+        "filename": "Entergy-AcornFixture_Granville-150W_LED.pdf",
+        "description": "",
+        "availability": [ "ETI" ]
+      }
+    ],
+    "variations": [
+      {
+        "fixture": "150 Watt HPS",
+        "bulb": "HPS",
+        "illumination": {
+          "diameter": 80
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "150 Watt MH",
+        "bulb": "MH",
+        "illumination": {
+          "diameter": 80
+        },
+        "availability": [ "EMI", "EGSL", "ELL", "ETI", "EAI", "ENO" ],
+        "zoning": [ "com-res", "com", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "8,400 LED (150 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 150
+        },
+        "availability": [ "EAI", "ENO", "EMI", "ELL", "ETI" ],
+        "zoning": [ "com-res", "com", "com", "com", "com" ]
+      },
+      {
+        "fixture": "5,200 LED (100 HID Equivelent)",
+        "bulb": "LED",
+        "illumination": {
+          "diameter": 80
+        },
+        "availability": [ "EAI" ],
+        "zoning": [ "com-res" ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,459 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    padding-top: 64px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Raleway', serif;
+}
+
+h2, h3, h4, h5 {
+    text-align: center;
+}
+
+ul {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+.container {
+    .arrow-separator {
+        width: 100%;
+        height: 34px;
+        position: relative;
+        margin-top: -17px;
+        margin-bottom: -23px;
+        background-image: url(../images/svg/white-arrow-line.svg);
+        background-size: 5500px 33px;
+        background-position: 420px center;
+        background-repeat: no-repeat;
+    }
+}
+.video.container{
+    .clearfix{
+        margin:30px 0;
+    }
+}
+.container-fluid > .row {
+    margin: 0;
+
+    > .col-xs-12 {
+        padding: 0;
+    }
+}
+
+.btn-entergy {
+    background-color: #fff;
+    border-radius: 0;
+    color: #e70b28;
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+
+    &:hover, &:focus {
+        color: #e70b28;
+    }
+
+    span.caret {
+        border-left-width: 10px;
+        border-right-width: 10px;
+        border-top-width: 10px;
+        color: #e80a26;
+        float: right;
+        height: 20px;
+        margin-top: 12px;
+        width: 20px;
+    }
+}
+
+.btn-entergy-inverse {
+    background-color: #353439;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 29px;
+
+    &:hover, &:focus {
+        color: #fff;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-entergy.btn-hollow {
+    background-color: transparent;
+    border-color: #e70b28;
+    border-width: 2px;
+    color: #e70b28;
+    font-size: 18px;
+    padding: 5px 10px;
+    min-height: 30px;
+
+    &:hover {
+        background-color: #e70b28;
+        color: #ddd9d4;
+    }
+}
+
+.dropdown-menu {
+    border: none;
+}
+
+.dropdown-menu-inverse {
+    min-width: 350px;
+    background-color: #353439;
+    border-radius: 0;
+
+    li {
+        a {
+            color: #fff;
+            font-size: 20px;
+            padding: 5px 20px;
+        }
+    }
+}
+
+.testimonial {
+    text-align: center;
+
+    .text-wrap {
+        position: relative;
+
+        svg.quote {
+            width: 48px;
+            height: 32px;
+            margin: 0 10px;
+            fill: none;
+
+            path {
+                fill: none;
+                stroke: #aca298;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+        }
+
+        blockquote {
+            border: 0;
+            margin: 0;
+            padding: 10px;
+
+            p {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 24px;
+            }
+
+            p.byline-name {
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+
+            p.byline-title {
+                font-size: 14px;
+                font-style: italic;
+                padding-left: 23px;
+            }
+        }
+    }
+}
+
+a.show-more, a.show-less {
+    background-position: right 6px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    color: #ed1737;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 26px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a.show-more {
+    background-image: url(../images/svg/down-arrow.svg);
+}
+
+a.show-less {
+    background-image: url(../images/svg/up-arrow.svg);
+}
+
+.full-bleed-background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.full-bleed-background.svg-background {
+    right: 0;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+
+.full-bleed-background.zigzag-up-down, .full-bleed-background.zigzag-single {
+    background-image: url(../images/svg/centered-zigzag-line.svg);
+    background-size: 1800px;
+    height: 16px;
+}
+
+.full-bleed-background.white-arrow-line {
+    background-image: url(../images/svg/white-arrow-line.svg);
+    background-position: left;
+    background-size: 5900px;
+    left: 45px;
+    height: 36px;
+    margin-top: -10px;
+    width: auto;
+}
+
+.separator-container {
+    height: 0;
+    position: relative;
+
+    img {
+        position: absolute;
+        height: 32px;
+        top: -8px;
+    }
+}
+
+#visit-entergy a, .navbar-right ul li.phone-number a{
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.lb-number {
+    display: none !important;
+}
+
+body.ab-nav .navbar-fixed-top {
+    position: absolute;
+}
+
+.flex-control-nav.flex-control-paging {
+    text-align: right;
+    font-size: 0px;
+}
+
+.flexslider .flex-nav-prev, .flexslider .flex-nav-next {
+    display: none;
+}
+
+.navbar .container {
+    overflow: visible;
+}
+
+
+.navbar-right .nav-contact, #nav-contact-us {
+    display: none;
+}
+
+#nav-contact-us-otp {
+    font-size: 18px;
+    background: #eb0a26;
+    color: white;
+    float: right;
+    margin: 0;
+}
+
+#nav-contact-us-otp:hover {
+    color: #eb0a26;
+    background: white;
+}
+
+#page {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.report-outage-link {
+    padding-left: 30px;
+    font-size: 20px;
+    color: #eb0a26;
+    font-weight: bold;
+    position: relative;
+    float: left;
+    font-family: 'Raleway', serif;
+    top: -10px;
+}
+
+#quote-tail {
+    position: absolute;
+    bottom: 66px;
+    width: 47px;
+    height: auto;
+    left: 20%;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+}
+
+.copyright-notice {
+    padding-top: 33px;
+    background-image: url(../images/WePowerLife.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.parsley-errors-list {
+    list-style:none;
+    margin-left:0;
+}
+
+.parsley-required, .parsley-type, .parsley-pattern {
+    font-weight:bold;
+    color:#fff;
+    margin:10px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .copyright-notice {
+        background-size: 70% auto;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    body {
+        padding-top: 78px;
+    }
+
+    h2, h3 {
+        font-size: 45px;
+    }
+
+    .navbar-header a.navbar-brand {
+        padding: 15px 15px;
+    }
+
+    .navbar-right .nav-contact, #nav-contact-us {
+        display: block;
+    }    
+
+    #nav-contact-us-otp {
+        margin: 14px 20px 0px 0px;
+    }
+
+    .report-outage-link {
+        padding-left: 20px;
+    }
+
+    .btn-entergy {
+        width: auto;
+        font-size: 24px;
+    }
+
+    .btn-entergy-inverse {
+        font-size: 24px;
+        line-height: normal;
+        font-weight: bold;
+    }
+
+    .full-bleed-background.zigzag-up-down {
+        background-image: url(../images/svg/2-zigzag-line.svg);
+        background-size: initial;
+        height: 28px;
+        width: 18000px;
+        position: relative;
+        left: -9000px;
+        margin-left: 50%;
+    }
+
+    .full-bleed-background.zigzag-single {
+        background-image: url(../images/svg/1-zigzag-line.svg);
+        background-size: initial;
+        height: 16px;
+    }
+
+    .full-bleed-background.white-arrow-line {
+        right: auto;
+        left: auto;
+        width: 100%;
+    }
+
+    .testimonial {
+        text-align: left;
+
+        .text-wrap {
+            svg.quote {
+                width: 60px;
+                height: 45px;
+                margin: 0;
+                bottom: -45px;
+            }
+
+            svg.left-quote {
+                left: 0;
+            }
+
+            svg.right-quote {
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    h2, h3 {
+        font-size: 55px;
+    }
+
+    .benefits-toggle-container {
+        margin-top: 20px;
+    }
+
+    .testimonial {
+        .text-wrap {
+            blockquote {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .full-bleed-background.white-arrow-line {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    h2, h3 {
+        font-size: 65px;
+    }
+}
+
+@import "navbar.less";
+
+@import "index-sections/header.less";
+@import "index-sections/security-lighting-benefits.less";
+@import "index-sections/benefits-of-leasing.less";
+@import "index-sections/why-is-security-lighting-important.less";
+@import "index-sections/led-advantages.less";
+@import "index-sections/region-selection.less";
+@import "index-sections/available-fixtures.less";
+@import "index-sections/best-bulb-choices.less";
+@import "index-sections/testimonials.less";
+@import "index-sections/contact.less";
+@import "index-sections/installations.less";
+@import "index-sections/faqs.less";
+@import "footer.less";
+@import "home-fixture.less";

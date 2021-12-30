@@ -1,0 +1,41 @@
+﻿@model security_lighting_microsite.models.Fixture
+@{
+    Layout = null;
+
+    var type = Model.Type.Replace(' ', '-').Replace('/','-').ToLower();
+    var summary = Model.Summary;
+}
+
+<div class="fixture-summary">
+    <div class="fixture-summary-images @type">
+        <a class="featured-image" href="~/images/fixtures/@type/product-image.jpg" data-lightbox="summary"><img src="~/images/fixtures/@type/product-image.jpg" alt="@Model.Type"/></a>
+
+        @for (var a = 1; a < 11; a++) {
+            if (a > 4 && !Model.HasLedBulbs) { break; }
+
+            if (File.Exists(Server.MapPath("~/images/fixtures/" + type + "/installation-" + a + ".jpg"))) {
+                <a class="sum-thumb-@(a)" href="~/images/fixtures/@type/installation-@(a).jpg" data-lightbox="summary"><img alt="Additional @Model.Type" src="~/images/fixtures/@type/installation-@(a).jpg" class="img-responsive" /></a>
+            }
+        }
+        <div class="col-xs-12 text-center">Click to see more</div>
+    </div>
+
+    <div class="fixture-summary-data">
+        <h4>@Model.Type</h4>
+
+        <p>
+            @summary
+        </p>
+
+        <h5>Features:</h5>
+         
+        <ul>
+            @foreach (var feature in Model.ModifiedFeatures)
+            {
+                <li>@feature</li>
+            }
+        </ul>
+
+        <a href="~/@(ViewBag.OpCo)/fixture/@Model.Type.ToLower().Replace(' ', '-').Replace('/','-')" class="btn btn-entergy btn-hollow">View Fixture Details</a>
+    </div>
+</div>

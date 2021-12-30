@@ -1,0 +1,237 @@
+<div id="fixtureRecommender" v-bind:class="{'u--transitionBack': animateBack, 'noIE': !isIE, 'isIE': isIE}" v-cloak>
+    <div class="header">
+        <div class="header__progress" v-bind:style="{width:progress}"></div>
+        <div class="header__topbar">
+            <!-- <transition name="header__matching--transition">
+                div class="header__matching" v-if="showHeader"><span>{{matchingCount}}</span> Matching Fixtures</div>
+            </transition> -->
+            <transition name="header__back--transition">
+                <div class="header__back" v-if="showHeader" v-on:click="back()">Back</div>
+            </transition>
+        </div>
+    </div>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--start" v-if="step == 'start'">
+            <div class="step__headline">Find your Perfect Fixture</div>
+            <div class="u--center u--pt75">
+                <div class="step__button" v-on:click="begin()">Begin</div>
+            </div>
+            <div class="step__pole step__pole--left"></div>
+            <div class="step__pole step__pole--right"></div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--commercial_residential" v-if="step == 'commercial_residential'">
+            <div class="step__headline">At what kind of location are you looking for security lighting?</div>
+            <div class="u--center u--pt75">
+                <div class="step__button step__button--commercial" v-on:click="select('commercial')">Commercial</div>
+                <div class="step__button step__button--residential" v-on:click="select('residential')">Residential</div>
+            </div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--purpose" v-if="step == 'purpose'">
+            <div class="step__headline">What kind of area are you looking to light?</div>
+            <div class="u--center u--pt75">
+                <!-- div class="step__button step__button--security" v-on:click="select('security')">Security</div -->
+                <div class="step__button step__button--work" v-on:click="select('work')">Work Areas</div>
+                <div class="step__button step__button--parking" v-on:click="select('parking')">Parking Areas</div>
+                <div class="step__button step__button--pedestrian" v-on:click="select('pedestrian')">Pedestrian</div>
+            </div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--standard_decorative" v-if="step == 'standard_decorative'">
+            <div class="step__headline">Do you prefer standard or decorative fixtures?</div>
+            <div class="u--center u--pt75">
+                <div class="step__button step__button--standard" v-on:click="select('standard')">Standard</div>
+                <div class="step__button step__button--decorative" v-on:click="select('decorative')">Decorative</div>
+            </div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--area_feature" v-if="step == 'area_feature'">
+            <div class="step__headline">Indicate the type of area you need to light.</div>
+            <div class="step__area">
+                <div class="step__area-circle step__area-circle--5" v-bind:class="{'step__area-circle--selected':areaWidth>=5}" v-on:click="areaWidth=5"></div>
+                <div class="step__area-circle step__area-circle--4" v-bind:class="{'step__area-circle--selected':areaWidth>=4}" v-on:click="areaWidth=4"></div>
+                <div class="step__area-circle step__area-circle--3" v-bind:class="{'step__area-circle--selected':areaWidth>=3}" v-on:click="areaWidth=3"></div>
+                <div class="step__area-circle step__area-circle--2" v-bind:class="{'step__area-circle--selected':areaWidth>=2}" v-on:click="areaWidth=2"></div>
+                <div class="step__area-circle step__area-circle--1" v-bind:class="{'step__area-circle--selected':areaWidth>=1}" v-on:click="areaWidth=1"></div>
+                <div class="step__area-legend">
+                    <div class="step__area-legend-text step__area-legend-text--1">A small walkway</div>
+                    <div class="step__area-legend-text step__area-legend-text--2">A large retail area</div>
+                </div>
+            </div>
+            <div class="step__button step__button--continue" v-on:click="select('area')">Continue &raquo;</div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--type_of_coverage" v-if="step == 'type_of_coverage'">
+            <div class="step__headline">What kind of area are you looking to light?</div>
+            <div class="step__range">
+                <svg class="step__range-spot" width="100%" height="280" viewBox="0 0 700 280" preserveAspectRatio="none">
+                    <defs>
+                        <radialGradient id="fill" cx="0%" cy="0%" r="100%" > 
+                            <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:0.6" />
+                            <stop offset="60%" style="stop-color:rgb(255,255,255);stop-opacity:0.6" />
+                            <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.2" />
+                        </radialGradient>
+                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+                        </filter>
+                        <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+                        </filter>
+                    </defs>
+                    <polygon v-bind:points="coveragePoints" fill="url(#fill)" filter="url(#glow2)" />
+                    <polygon v-bind:points="coveragePoints" fill="#fff" opacity="0.3" filter="url(#glow)" />
+                </svg>
+                <input type="range" min="0" max="100" value="50" class="step__range-input" v-model.number="coverage">
+                <div class="step__range-scale">
+                    <div style="width:50%;">
+                        <span>Close Space (0-50')</span>
+                    </div>
+                    <div style="width:50%;">
+                        <span></span>
+                        <span>Open Area (50' or more)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="step__button step__button--continue" v-on:click="select('coverage')">Continue &raquo;</div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--type_of_style" v-if="step == 'type_of_style'">
+            <div class="step__headline">What’s your preferred architectural style?</div>
+            <div class="step__range">
+                <div class="step__icon step__icon--traditional">Traditional</div>
+                <div class="step_range-box">
+                    <input type="range" min="0" max="2" value="1" class="step__range-input" v-model.number="style">
+                </div>
+                <div class="step__icon step__icon--modern">Modern</div>
+            </div>
+            <div class="step__button step__button--continue" v-on:click="select('style')">Continue &raquo;</div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--type_of_light" v-if="step == 'type_of_light'">
+            <div class="step__headline">What lighting look do you like best?</div>
+
+            <div class="step__lights">
+                <div class="step__light step__light--1of3 step__light--amber" v-on:click="type='amber_glow'" v-bind:class="{'step__light--active':type=='amber_glow'}"></div>
+                <div class="step__light step__light--2of3 step__light--white" v-on:click="type='bright_white'" v-bind:class="{'step__light--active':type=='bright_white'}"></div>
+                <div class="step__light step__light--3of3 step__light--led" v-on:click="type='led'" v-bind:class="{'step__light--active':type=='led'}"></div>
+            </div>
+            <div class="step__button step__button--continue" v-on:click="select('type')">Continue &raquo;</div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--illumination_distance" v-if="step == 'illumination_distance'">
+            <div class="step__headline">How large an area do you need to light?</div>
+
+            <div class="step__range">
+                <svg class="step__range-spot" width="100%" height="280" viewBox="0 0 700 280" preserveAspectRatio="none">
+                    <defs>
+                        <radialGradient id="fill" cx="0%" cy="0%" r="100%" > 
+                            <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:0.6" />
+                            <stop offset="60%" style="stop-color:rgb(255,255,255);stop-opacity:0.6" />
+                            <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.2" />
+                        </radialGradient>
+                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+                        </filter>
+                        <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+                        </filter>
+                    </defs>
+                    <polygon v-bind:points="distancePoints" fill="url(#fill)" filter="url(#glow2)" />
+                    <polygon v-bind:points="distancePoints" fill="#fff" opacity="0.3" filter="url(#glow)" />
+                </svg>
+                <input type="range" min="0" max="100" value="50" class="step__range-input" v-model.number="distance">
+                <template v-if="options=='a'">
+                    <div class="step__range-scale">
+                        <div style="width:50%;">
+                            <span>60 ft.</span>
+                        </div>
+                        <div style="width:50%;">
+                            <span>190 ft.</span>
+                            <span>320 ft.</span>
+                        </div>
+                    </div>
+                </template>
+                <template v-if="options=='b'">
+                    <div class="step__range-scale">
+                        <div style="width:40%;">
+                            <span>0 ft.</span>
+                        </div>
+                        <div style="width:60%;">
+                            <span>75 ft.</span>
+                            <span>130 ft.</span>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class="step__button step__button--continue" v-on:click="select('distance')">Continue &raquo;</div>
+        </div>
+    </transition>
+
+    <transition name="step--transition" :duration="{enter:880,leave:480}">
+        <div class="step step--result" v-if="step == 'result'">
+            <template v-if="matchingCount==1">
+                <div class="step__fixture">
+                    <div class="step__product-images">
+                        <img class="step__product-image" v-bind:src="relativeImagePath + matching[0].imgs[0]" v-bind:alt="matching[0].name">
+                        <img class="step__product-image step__product-image--sub" v-bind:src="relativeImagePath + matching[0].imgs[1]" v-bind:alt="matching[0].name">
+                        <img class="step__product-image step__product-image--sub" v-bind:src="relativeImagePath + matching[0].imgs[2]" v-bind:alt="matching[0].name">
+                    </div>
+                    <div class="step__fixture-info">
+                        <h1 class="step__headline">Recommended Fixture:</h1>
+                        <h2>{{matching[0].name}}</h2>
+                        <p>{{matching[0].desc}}</p>
+                        <ul>
+                            <li v-for="feature in matching[0].features">{{feature}}</li>
+                        </ul>
+                        <p>
+                            Recommended Lighting:
+                            <template v-if="options=='led'">LED</template>
+                            <template v-if="options=='bright_white'">Bright White Light (Metal Halide)</template>
+                            <template v-if="options=='amber_glow'">Amber Glow Light (High Pressure Sodium)</template>
+                        </p>
+                        <p>
+                            <a v-bind:href="relativePath + matching[0].link" v-on:click="viewDetails(matching[0])" class="step__button">View Fixture Details</a>&nbsp;&nbsp;
+                            <a href="#contact" v-on:click.capture="entergyContactUs(matching[0])" class="step__button">Contact Us</a>
+                        </p>
+                    </div>
+                </div>
+            </template>
+            <template v-if="matchingCount>1">            
+                <h1 class="step__headline">Recommended Fixtures:</h1>
+                <div class="multiple_steps">
+                    <div v-for="(item, index) in matching" class="step__fixture">
+                        <div class="step__fixture-info">
+                            <h2>
+                                <img class="step__product-image" v-bind:src="relativeImagePath + matching[index].imgs[0]" v-bind:alt="item.name">
+                                {{item.name}}
+                            </h2>
+                            <p>{{item.desc}}</p>
+                            <div class="buttons">
+                                <a v-bind:href="item.link" v-on:click="viewDetails(item)" class="step__button">View Fixture Details</a>
+                                <a href="#" v-on:click.prevent="entergyContactUs(item)" class="step__button">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </transition>
+</div>
